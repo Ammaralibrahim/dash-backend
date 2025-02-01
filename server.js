@@ -21,11 +21,11 @@ mongoose.connect(process.env.MONGO_URI, {
   
 
     app.use(cors({
-        origin: 'brightedu-admin.vercel.app', // Frontend URL
-        methods: ['GET', 'POST'], // İzin verilen HTTP metotları
-        allowedHeaders: ['Content-Type', 'Authorization'], // Authorization başlığını ekleyin
-        credentials: true, // Eğer oturum yönetimi veya çerezler kullanıyorsanız
-      }));
+      origin: 'https://brightedu-admin.vercel.app', // Yalnızca bu frontend domain'ine izin ver
+      methods: ['GET', 'POST'], // Yalnızca GET ve POST isteklerine izin ver
+      allowedHeaders: ['Content-Type', 'Authorization'], // Content-Type ve Authorization başlıklarına izin ver
+      credentials: true, // Çerezler veya oturum verileri ile istek yapılacaksa
+    }));
       
       app.use(express.json());
 
