@@ -21,7 +21,7 @@ mongoose.connect(process.env.MONGO_URI, {
   
 
     app.use(cors({
-        origin: 'http://localhost:3000', // Frontend URL
+        origin: 'brightedu-admin.vercel.app', // Frontend URL
         methods: ['GET', 'POST'], // İzin verilen HTTP metotları
         allowedHeaders: ['Content-Type', 'Authorization'], // Authorization başlığını ekleyin
         credentials: true, // Eğer oturum yönetimi veya çerezler kullanıyorsanız
