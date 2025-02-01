@@ -22,13 +22,12 @@ mongoose
 
   app.use(
     cors({
-      origin: "*", // Herhangi bir kaynaktan gelen istekleri kabul eder
-      methods: ["GET", "POST", "PUT", "DELETE", "PATCH"], // Tüm HTTP metotlarına izin verir
-      allowedHeaders: ["Content-Type", "Authorization", "*"], // Tüm başlıklara izin verir
-      credentials: true, // Çerezler ve oturum bilgilerine izin verir
+      origin: "https://brightedu-admin.vercel.app", // Replace with your frontend URL
+      methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+      allowedHeaders: ["Content-Type", "Authorization"],
+      credentials: true, // Allow credentials (cookies, authorization headers, etc.)
     })
   );
-  
 
 app.use(express.json());
 
